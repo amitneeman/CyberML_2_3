@@ -1,0 +1,1 @@
+{"model_indicator": "bert_classifier", "seq_len": 64, "dataset_indicator": "./eSPD-datasets-master", "project": "flair", "run_id": "2022-05-30_21-07-48__bert_classifier_on_./eSPD-datasets-master_with_seq-len-64", "data_dir": "datasets/./eSPD-datasets-master/", "run_dir": "resources/2022-05-30_21-07-48__bert_classifier_on_./eSPD-datasets-master_with_seq-len-64/"}
