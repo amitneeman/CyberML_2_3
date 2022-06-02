@@ -1,0 +1,12 @@
+datasets/
+__pycache__/
+resources/
+legacy/
+*.pyc
+.swp
+*.csv
+*.tsv
+*.sublime*
+todo
+.fuse_hidden*
+notes
