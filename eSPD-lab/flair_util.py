@@ -30,12 +30,12 @@ def get_corpus(data_dir, dataset_indicator):
     corpus: Corpus = CSVClassificationCorpus(
         data_dir,
         column_name_map,
-        label_type="SomeFakeLableBoris",
-        test_file='%s-test.csv' % dataset_indicator,
-        train_file='%s-train.csv' % dataset_indicator,
+        label_type="Amit",
+        test_file=f'{dataset_indicator}-test.csv',
+        train_file=f'{dataset_indicator}-train.csv',
         skip_header=True,
-        # delimiter = ' ',
-        # in_memory = True
+        #delimiter = ' ',
+        #in_memory = True
     )
 
     # corpus = corpus.downsample(0.1) # when you have low memory

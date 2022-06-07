@@ -12,15 +12,15 @@ from util import getTrainArgs
 args = getTrainArgs()
 
 # 1. get the corpus
-dir = './datasets/VTPAN/'
+dir = '/Users/amitneeman/Development/Learn/Masters/cyber secuirity/cyber:hw23/eSPD-lab/datasets/VTPAN/csv'
 data_indicator = 'VTPAN'
-# corpus: Corpus = get_corpus(args.data_dir, args.dataset_indicator)
+#corpus: Corpus = get_corpus(args.data_dir, args.dataset_indicator)
 corpus: Corpus = get_corpus(dir, data_indicator)
 
 # 2. create the label dictionary
-label_dict = corpus.make_label_dictionary()
+# label_dict = corpus.make_label_dictionary()
 # TODO do this ourself so it doesn't have to be made
-# label_dict = ["non-predator", "predator"]
+label_dict = ["non-predator", "predator"]
 
 # 3. initialize transformer document embeddings (many models are available)
 # document_embeddings = TransformerDocumentEmbeddings('bert-base-cased', fine_tune = True)
@@ -32,11 +32,12 @@ document_embeddings = TransformerDocumentEmbeddings(args.model_indicator, fine_t
 classifier = TextClassifier(
     document_embeddings,
     label_dictionary=label_dict,
+    label_type="Amit"
     # beta=.5
 )
 
 # 5. initialize the text classifier trainer with Adam optimizer
-trainer = ModelTrainer(classifier, corpus, optimizer=Adam)
+trainer = ModelTrainer(classifier, corpus)
 
 # 6. start the training
 out_dir = os.path.join(args.run_dir, "non_quantized")
